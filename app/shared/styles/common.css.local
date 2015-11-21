@@ -1,0 +1,68 @@
+.welcome {
+  position: relative;
+  height: 100%;
+  color: #888;
+  text-align: center;
+}
+
+.brand {
+  margin-left: 20px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.nav {
+  height: 50px;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+
+.clearfix:after {
+  overflow: hidden;
+  clear: both;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inlineBlock {
+  display: inline-block;
+}
+
+.none {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.nobr {
+  white-space: nowrap;
+}
+
+.glyph {
+  cursor: pointer;
+}
