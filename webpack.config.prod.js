@@ -20,7 +20,7 @@ module.exports = [{
   output: {
     filename: 'assets/[name].js',
     path: path.join(__dirname, deployLocation),
-    publicPath: `/${deployLocation}`,
+    publicPath: '/',
     sourceMapFilename: '/[file].map'
   },
   devtool: '#cheap-source-map',
@@ -104,6 +104,10 @@ module.exports = [{
       test: /\.css$/,
       include: /node_modules/,
       loader: 'css-loader/locals'
+    },
+    {
+      test: /\.(png|jpg|jpeg|gif)$/,
+      loader: 'file?name=/assets/[name].[ext]'
     }
   ]
   },
