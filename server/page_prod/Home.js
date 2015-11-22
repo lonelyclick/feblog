@@ -66,25 +66,17 @@ module.exports =
 
 	var _appHome2 = _interopRequireDefault(_appHome);
 
-	function output(req) {
+	var _Html = __webpack_require__(154);
+
+	var _Html2 = _interopRequireDefault(_Html);
+
+	function output() {
 	  return _reactDomServer2['default'].renderToString(_react2['default'].createElement(
-	    'html',
-	    null,
-	    _react2['default'].createElement(
-	      'head',
-	      null,
-	      _react2['default'].createElement(
-	        'title',
-	        null,
-	        'title'
-	      )
-	    ),
-	    _react2['default'].createElement(
-	      'body',
-	      null,
-	      _react2['default'].createElement('div', { id: 'content', dangerouslySetInnerHTML: { __html: _reactDomServer2['default'].renderToString(_react2['default'].createElement(_appHome2['default'], null)) } }),
-	      _react2['default'].createElement('script', { src: '/assets/Home.js' })
-	    )
+	    _Html2['default'],
+	    {
+	      title: 'Home',
+	      displayName: 'Home' },
+	    _react2['default'].createElement(_appHome2['default'], null)
 	  ));
 	}
 
@@ -18685,6 +18677,16 @@ module.exports =
 
 	var _HomeCss2 = _interopRequireDefault(_HomeCss);
 
+	__webpack_require__(151);
+
+	var _moment = __webpack_require__(152);
+
+	var _moment2 = _interopRequireDefault(_moment);
+
+	var _imagesAvatarPng = __webpack_require__(153);
+
+	var _imagesAvatarPng2 = _interopRequireDefault(_imagesAvatarPng);
+
 	var Home = (function (_Component) {
 	  _inherits(Home, _Component);
 
@@ -18717,7 +18719,9 @@ module.exports =
 	        { className: _HomeCss2['default'].root },
 	        _react2['default'].createElement(
 	          'button',
-	          { type: 'button', onClick: this.onAddCount },
+	          {
+	            type: 'button',
+	            onClick: this.onAddCount },
 	          'add count'
 	        ),
 	        _react2['default'].createElement(
@@ -18725,6 +18729,13 @@ module.exports =
 	          { className: _HomeCss2['default'].welcome },
 	          'Count Result: ',
 	          count
+	        ),
+	        (0, _moment2['default'])().format('YYYY-MM-DD HH:mm:ss'),
+	        _react2['default'].createElement('img', { src: _imagesAvatarPng2['default'] }),
+	        _react2['default'].createElement(
+	          'div',
+	          { className: _HomeCss2['default'].bg },
+	          'something'
 	        )
 	      );
 	    }
@@ -18738,32 +18749,118 @@ module.exports =
 
 /***/ },
 /* 150 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 	module.exports = {
-		"root": "Home-css__root___15Z3Z",
-		"welcome": "Home-css__welcome___Gkn_x " + __webpack_require__(151)["welcome"] + ""
+		"root": "Home__root___22pYB",
+		"bg": "Home__bg___3txWj"
 	};
 
 /***/ },
 /* 151 */
 /***/ function(module, exports) {
 
-	module.exports = {
-		"welcome": "common-css__welcome___2zbA2",
-		"brand": "common-css__brand___2rVu1",
-		"centered": "common-css__centered___19oir",
-		"nav": "common-css__nav___2EO80",
-		"clearfix": "common-css__clearfix___3Heyu",
-		"block": "common-css__block___2rzfq",
-		"inline": "common-css__inline___GqCN-",
-		"inlineBlock": "common-css__inlineBlock___1lvye",
-		"none": "common-css__none___1Vwrm",
-		"hidden": "common-css__hidden___2jEbE",
-		"visible": "common-css__visible___2zdkw",
-		"nobr": "common-css__nobr___1eEz3",
-		"glyph": "common-css__glyph___1zbgV"
-	};
+	
+
+/***/ },
+/* 152 */
+/***/ function(module, exports) {
+
+	module.exports = require("moment");
+
+/***/ },
+/* 153 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "assets/avatar.png"
+
+/***/ },
+/* 154 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDomServer = __webpack_require__(2);
+
+	var Html = (function (_Component) {
+	  _inherits(Html, _Component);
+
+	  function Html() {
+	    _classCallCheck(this, Html);
+
+	    _get(Object.getPrototypeOf(Html.prototype), 'constructor', this).apply(this, arguments);
+	  }
+
+	  _createClass(Html, [{
+	    key: 'render',
+	    value: function render() {
+	      var _props = this.props;
+	      var children = _props.children;
+	      var displayName = _props.displayName;
+	      var title = _props.title;
+
+	      var cssLink = process.env.NODE_ENV === 'production' && _react2['default'].createElement('link', {
+	        rel: 'stylesheet',
+	        href: '/assets/' + displayName + '.css'
+	      });
+
+	      return _react2['default'].createElement(
+	        'html',
+	        null,
+	        _react2['default'].createElement(
+	          'head',
+	          null,
+	          _react2['default'].createElement(
+	            'title',
+	            null,
+	            title
+	          ),
+	          cssLink
+	        ),
+	        _react2['default'].createElement(
+	          'body',
+	          null,
+	          _react2['default'].createElement('div', {
+	            id: 'content',
+	            dangerouslySetInnerHTML: { __html: (0, _reactDomServer.renderToString)(children) }
+	          }),
+	          _react2['default'].createElement('script', { src: '/assets/' + displayName + '.js' })
+	        )
+	      );
+	    }
+	  }], [{
+	    key: 'propTypes',
+	    value: {
+	      children: _react.PropTypes.any,
+	      displayName: _react.PropTypes.string,
+	      title: _react.PropTypes.string
+	    },
+	    enumerable: true
+	  }]);
+
+	  return Html;
+	})(_react.Component);
+
+	exports['default'] = Html;
+	module.exports = exports['default'];
 
 /***/ }
 /******/ ]);

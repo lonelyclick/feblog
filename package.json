@@ -4,12 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node webpack.config.server.js",
-    "dev": "webpack --config webpack.config.development.js",
-    "build": "webpack --config webpack.config.production.js",
-    "mockdev": "nodemon mock.js -w mock.js",
-    "mockbuild": "nodemon mock.js -w mock.js --mock-build",
-    "eslint": "webpack --config webpack.config.development.js --enable-eslint"
+    "dev": "webpack --config webpack.config.js",
+    "prod": "webpack --config webpack.config.prod.js",
+    "server": "nodemon server/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +20,7 @@
     "js-cookie": "^2.0.4",
     "keymirror": "^0.1.1",
     "moment": "^2.10.6",
+    "normalize.css": "^3.0.3",
     "react": "^0.14.0",
     "react-addons-perf": "^0.14.2",
     "react-bootstrap": "^0.27.3",

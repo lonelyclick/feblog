@@ -2,17 +2,14 @@ import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 
 import Home from '../../app/Home'
+import Html from './Html'
 
-export default function output (req) {
+export default function output () {
   return ReactDOMServer.renderToString(
-    <html>
-      <head>
-        <title>title</title>
-      </head>
-      <body>
-        <div id="content" dangerouslySetInnerHTML={{ __html: ReactDOMServer.renderToString(<Home />) }} />
-        <script src="/assets/Home.js"></script>
-      </body>
-    </html>
+    <Html
+      title="Home"
+      displayName="Home">
+      <Home />
+    </Html>
   )
 }

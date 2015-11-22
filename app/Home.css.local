@@ -1,7 +1,0 @@
-.root {
-  background: red;
-}
-
-.welcome {
-  composes: welcome from "./shared/styles/common.css";
-}

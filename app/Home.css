@@ -1,0 +1,8 @@
+.root {
+
+}
+
+.bg {
+  height: 500px;
+  background: url(./images/avatar.png) no-repeat;
+}
