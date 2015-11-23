@@ -29,6 +29,7 @@ export default class Html extends Component {
             id="content"
             dangerouslySetInnerHTML={{ __html: renderToString(children) }}
           />
+          <script src="/dpd.js" />
           <script src={`/assets/${displayName}.js`} />
         </body>
       </html>

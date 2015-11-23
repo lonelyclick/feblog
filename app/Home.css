@@ -1,8 +1,29 @@
 .root {
-
 }
 
 .bg {
   height: 500px;
   background: url(./images/avatar.png) no-repeat;
+}
+
+.table {
+  width: 80%;
+  margin: 20px;
+  background: #aaa;
+  border-collapse: initial;
+  border-spacing: 1px;
+
+  tr {
+    background: red;
+
+    td,
+    th {
+      line-height: 30px;
+      background: #eee;
+    }
+  }
+}
+
+.linkDel {
+  margin-left: 20px;
 }
